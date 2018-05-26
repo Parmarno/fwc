@@ -85,6 +85,32 @@
 .matches .label-font{ font-size: 3rem; font-family: DBRamintraX, 'sans-serif'; color: #008853; }
 .matches label{ font-size: 3rem; font-family: DBRamintraX, 'sans-serif'; color: #008853; }
 
+.modal-choose{ border: 1px solid #008853; padding: 1rem 0 3rem;  }
+.modal-choose h1{ font-size: 3rem; font-family: DBRamintraX, 'sans-serif'; color: #008853; font-weight: bold; }
+
+.group-items{}
+.group-items .title{ font-size: 2rem; font-family: DBRamintraX, 'sans-serif'; color: #fff; background-color: #6D6E6F; }
+.group-items ul{ margin: 0; padding: 0; border: 0; list-style: none; }
+.group-items li{ list-style: none; background-color: #E5E6E7; color: #111; padding: 0 2rem; cursor: pointer; }
+.group-items li:nth-child(even){ background-color: #CFD1D2; }
+.group-items li:hover{ background-color: #008853; color: #fff; }
+.group-items li:hover .name{ background-color: #008853; color: #fff; }
+.group-items span{ float: left; }
+.group-items .image{ width: 20%; }
+.group-items img{ max-width: 100%; }
+.group-items .name{ 
+	width: 70%; font-size: 2rem; font-family: DBRamintraX, 'sans-serif'; color: #111; 
+	padding-left: 2rem; line-height: 45px;
+}
+
+@media (min-width : 768px) { 
+	.group-items .title{ font-size: 3rem; }
+	.group-items .image{ width: 10%; }
+	.group-items .name{
+		width: 80%; line-height: 56px; font-size: 3rem;
+	}
+}
+
 @media (min-width : 768px) { 
 	.modal-dialog-center {
 	    position: absolute;
