@@ -53,6 +53,7 @@ body{
 .text-main{ display: block; color: #008853; font-size: 3rem; font-family: DBRamintraX, 'sans-serif'; font-weight: bold;}
 .text-sub{ display: block; color: #111; font-size: 1.5rem; }
 
+
 @media only screen and (min-width : 992px) {
 	.text-main{
 		font-size: 5rem
@@ -67,18 +68,22 @@ body{
 }
 
 .phone-number{ margin-top: 3rem; }
-.phone-number .number-circle{ 
+.phone-number .number-circle,
+.phone-number .input-circle{ 
 	font-size: 2rem; font-family: DBRamintraX, 'sans-serif'; font-weight: bold; color: #008853; 
 	line-height: 24px; display: inline-block; border: 1px solid #008853;  border-radius: 50%;
 	width: 24px; height: 24px;
-	margin: 0 .3rem;
+	margin: 0 .3rem; 
+    text-align: center;
 }
+
 .phone-number .markline{  display: none; font-size: 7rem; font-family: DBRamintraX, 'sans-serif';  font-weight: bold; color: #008853;   }
 @media only screen and (min-width : 992px) {
-	.markline{
+	.phone-number .markline{
 		display: inline-block;
 	}
-	.phone-number .number-circle{
+	.phone-number .number-circle,
+	.phone-number .input-circle{
 		width: 60px; height: 60px; line-height: 60px;
 		font-size: 7rem;
 	}
