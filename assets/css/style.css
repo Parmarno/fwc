@@ -46,6 +46,8 @@ body{
 .btn-converse{ background-color: #fff; border-radius: 5px; margin: 1rem 0 2rem; color: #008853; font-size: 2rem; font-family: DBRamintraX, 'sans-serif'; font-weight: bold; }
 .btn-converse:hover{ color: #fff; background-color: #008853; }
 .btn-converse .text-right{ float: right; }
+.btn-converse img{ max-height: 35px; padding-right: 2rem; }
+.btn-converse span{ display: block; text-align: left; }
 
 .line{ height: 5px; width: 90%; margin: 3rem auto; }
 .line.line-green{ background-color: #008853; }
