@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Football World Cups</title>
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+	</head>
+	<body>
+
+		<div class="container container-bg">
+			<div class="col-md-8 col-md-offset-2">
+				<div id="main" class="panel-main">
+					<div class="panel-sub">
+						<div class="profile">
+							<div class="circle-image text-center">
+								<div class="position-image">
+									<img src="assets/images/user.png" alt="" class="img-circle">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-1 col-md-8 col-md-offset-2">
+									<p class="profile-desc">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure commodi quis quos iusto illum similique dolorum rem odit qui nihil, suscipit minima at ab veritatis ratione ad incidunt harum maiores dignissimos optio laboriosam doloribus et.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="text-center">
+							<button class="btn btn-success btn-green">
+								แก้ไขข้อมูล
+							</button>
+						</div>
+						
+						<div class="line line-green"></div>
+						<p class="text-main text-center">
+							ใส่รหัสคาราบาว 7 หลัก
+						</p>
+						<span class="text-sub text-center"> 
+							การส่งเลข 1 ครั้ง ถือเป็น 1 สิทธ์ในการตอบคำถาม 2 คำถาม
+						</span>
+						<div class="text-center">
+							<div class="phone-number">
+								<div class="number-circle">0</div>
+								<div class="number-circle">0</div>
+								<div class="number-circle">0</div>
+								<div class="markline">-</div>
+								<div class="number-circle">0</div>
+								<div class="number-circle">0</div>
+								<div class="number-circle">0</div>
+								<div class="markline">-</div>
+								<div class="number-circle">0</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-10 col-md-offset-1">
+								<button class="btn btn-danger btn-block btn-red font-dbr">
+									ส่งรหัสเลือกทีมที่เชียร์
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal -->
+		<div class="modal fade" id="wrongPass" tabindex="-1" role="dialog" aria-labelledby="wrongPassLabel">
+			<div class="modal-dialog modal-dialog-center" role="document">
+				<div class="modal-content modal-bg">
+					<div class="modal-body text-center">
+						คุณใส่รหัสไม่ถูกต้อง<br>กรุณาใส่ใหม่อีกครั้งค่ะ
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="assets/js/app.js"></script>
+		<script type="text/javascript">
+			$( document ).ready(function() {
+				$("#wrongPass").modal('show');
+			});
+		</script>
+	</body>
+</html>

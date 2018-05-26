@@ -48,3 +48,29 @@
 .font-dbr{
 	font-family: DBRamintraX, 'sans-serif';
 }
+
+.modal-bg{ 
+	background-color: #008853; font-size: 2rem; font-family: DBRamintraX, 'sans-serif'; font-weight: bold;
+	color: #fff; padding: 5rem 0; text-shadow: 1px 1px #111; 
+}
+
+.modal-bg h1{
+	font-size: 3rem; font-weight: bold;
+}
+
+@media (min-width : 768px) { 
+	.modal-dialog-center {
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    transform: translate(-50%, -50%) !important;
+	}
+
+	.modal-bg{ 
+		font-size: 4rem;
+	}
+
+	.modal-bg h1{
+		font-size: 5rem;
+	}
+}
