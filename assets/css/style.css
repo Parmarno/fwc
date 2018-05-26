@@ -32,6 +32,9 @@
 .btn-green{ background-color: #008853; border-color: #008853; border-radius: 30px; padding: 10px 26px; }
 .btn-red{background-color: #FF0000; border-color: #FF0000; font-size: 3rem; margin: 2rem 0; }
 .btn-square{border-radius: 5px; }
+.btn-converse{ background-color: #fff; border-radius: 5px; margin: 1rem 0 2rem; color: #008853; font-size: 2rem; font-family: DBRamintraX, 'sans-serif'; font-weight: bold; }
+.btn-converse:hover{ color: #fff; background-color: #008853; }
+.btn-converse .text-right{ float: right; }
 
 .line{ height: 5px; width: 90%; margin: 3rem auto; }
 .line.line-green{ background-color: #008853; }
@@ -56,6 +59,32 @@
 .panel-modal{ padding: 2rem 0; }
 .text-green p{ font-size: 3rem; font-family: DBRamintraX, 'sans-serif'; color: #008853; font-weight: bold;  }
 
+.section{ margin: 1rem 0; }
+.section .header{ font-size: 3rem; color: #fff; font-family: DBRamintraX, 'sans-serif'; }
+.section .header span{ float: left; display: block; padding: .5rem; width: 10%; text-align: center; background-color: #005736; font-weight: bold; }
+.section .header .full{ width: 90%; text-align: left; background-color: #008853; padding: .5rem 1rem; }
+
+.body{}
+.body .body-text{ font-size: 2rem; font-family: DBRamintraX, 'sans-serif';  font-weight: bold; color: #008853; margin: 1rem 0; }
+
+.matches{ border-top: 1px solid #008853; }
+.matches .bar{ 
+	color: #fff; background-color: #008853; font-size: 2rem; font-family: DBRamintraX, 'sans-serif';  
+	font-weight: bold; float: left; padding: .2rem 1rem;
+}
+.matches .triangle{
+	float: left;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 32px 32px 0 0;
+	border-color: #008853 transparent transparent transparent;
+	display: inline-block;
+}
+
+.matches .label-font{ font-size: 3rem; font-family: DBRamintraX, 'sans-serif'; color: #008853; }
+.matches label{ font-size: 3rem; font-family: DBRamintraX, 'sans-serif'; color: #008853; }
+
 @media (min-width : 768px) { 
 	.modal-dialog-center {
 	    position: absolute;
@@ -72,3 +101,120 @@
 		font-size: 5rem;
 	}
 }
+
+
+label{
+	position: relative;
+	cursor: pointer;
+	font-size: 30px;
+}
+
+input[type="checkbox"], input[type="radio"]{
+	position: absolute;
+	right: 9000px;
+}
+
+/*Radio Toggle*/
+
+.toggle input[type="radio"] + .label-text:before{
+	content: "\f204";
+	font-family: "FontAwesome";
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing:antialiased;
+	width: 1em;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.toggle input[type="radio"]:checked + .label-text:before{
+	content: "\f205";
+	color: #008853;
+	animation: effect 250ms ease-in;
+}
+
+.toggle input[type="radio"]:disabled + .label-text{
+	color: #aaa;
+}
+
+.toggle input[type="radio"]:disabled + .label-text:before{
+	content: "\f204";
+	color: #ccc;
+}
+
+/*--- Effects--*/
+@keyframes effect{
+	0%{transform: scale(0);}
+	25%{transform: scale(1.3);}
+	75%{transform: scale(1.4);}
+	100%{transform: scale(1);}
+}
+
+
+/*Check box*/
+input[type="checkbox"] + .label-text:before{
+	content: "\f096";
+	font-family: "FontAwesome";
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing:antialiased;
+	width: 1em;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+input[type="checkbox"]:checked + .label-text:before{
+	content: "\f14a";
+	color: #008853;
+	animation: effect 250ms ease-in;
+}
+
+input[type="checkbox"]:disabled + .label-text{
+	color: #008853;
+}
+
+input[type="checkbox"]:disabled + .label-text:before{
+	content: "\f0c8";
+	color: #008853;
+}
+
+/*Radio box*/
+
+input[type="radio"] + .label-text:before{
+	content: "\f10c";
+	font-family: "FontAwesome";
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing:antialiased;
+	width: 1em;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+input[type="radio"]:checked + .label-text:before{
+	content: "\f192";
+	color: #008853;
+	animation: effect 250ms ease-in;
+}
+
+input[type="radio"]:disabled + .label-text{
+	color: #008853;
+}
+
+input[type="radio"]:disabled + .label-text:before{
+	content: "\f111";
+	color: #008853;
+}
+
