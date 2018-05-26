@@ -40,6 +40,8 @@ body{
 .profile .circle-image .position-image img{ max-width: 150px; border: 1px solid #444; }
 .profile .profile-desc{ margin: 10rem 0 5rem; font-size: 1.5rem;line-height: 2; }
 
+.text-green{ color: #008853; text-align: center; }
+
 .btn-green{ background-color: #008853; border-color: #008853; border-radius: 30px; padding: 10px 26px; }
 .btn-red{background-color: #FF0000; border-color: #FF0000; font-size: 3rem; margin: 2rem 0; }
 .btn-square{border-radius: 5px; }
@@ -48,6 +50,13 @@ body{
 .btn-converse .text-right{ float: right; }
 .btn-converse img{ max-height: 35px; padding-right: 2rem; }
 .btn-converse span{ display: block; text-align: left; }
+.btn-green-converse{ background-color: #fff; border-color: #008853; border-radius: 30px; padding: 10px 26px }
+.btn-radio-green{ font-size: 1.5rem; color: #008853; border-radius: 35px !important; font-family: DBRamintraX, 'sans-serif'; font-weight: bold; background-color: #fff; border-color: #008853; }
+.btn-radio-green.active{ background-color: #008853; border-color: #008853; }
+
+.space-row{ margin-top: 2rem; }
+.addon-customize{ background-color: #fff; }
+.addon-customize i{ padding-right: 1rem; }
 
 .line{ height: 5px; width: 90%; margin: 3rem auto; }
 .line.line-green{ background-color: #008853; }
@@ -69,6 +78,8 @@ body{
 	}
 }
 
+.title-label{ font-size: 2rem; font-family: DBRamintraX, 'sans-serif'; font-weight: bold; color: #008853 }
+
 .phone-number{ margin-top: 3rem; }
 .phone-number .number-circle,
 .phone-number .input-circle{ 
@@ -78,8 +89,17 @@ body{
 	margin: 0 .3rem; 
     text-align: center;
 }
+.phone-number .markline{  display: none; font-size: 7rem; font-family: DBRamintraX, 'sans-serif';  font-weight: bold; color: #008853; }
 
-.phone-number .markline{  display: none; font-size: 7rem; font-family: DBRamintraX, 'sans-serif';  font-weight: bold; color: #008853;   }
+.phone-number-contact .number-circle,
+.phone-number-contact .input-circle{
+	font-size: 1.5rem; font-family: DBRamintraX, 'sans-serif'; font-weight: bold; color: #008853; 
+	line-height: 14px; display: inline-block; border: 1px solid #008853;  border-radius: 50%;
+	width: 14px; height: 14px;
+	margin: 0 .3rem; 
+    text-align: center;
+}
+.phone-number-contact .markline{  display: none; font-size: 4rem; font-family: DBRamintraX, 'sans-serif';  font-weight: bold; color: #008853; }
 @media only screen and (min-width : 992px) {
 	.phone-number .markline{
 		display: inline-block;
@@ -88,6 +108,12 @@ body{
 	.phone-number .input-circle{
 		width: 60px; height: 60px; line-height: 60px;
 		font-size: 7rem;
+	}
+	
+	.phone-number-contact .number-circle,
+	.phone-number-contact .input-circle{
+		width: 40px; height: 40px; line-height: 40px;
+		font-size: 4rem;
 	}
 }
 

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Football World Cups</title>
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+	</head>
+	<body>
+
+		<div class="container container-bg">
+			<div class="col-md-8 col-md-offset-2">
+				<div id="main" class="panel-main">
+					<div class="panel-sub">
+						<form action="" method="POST">
+							<div class="profile">
+								<div class="circle-image text-center">
+									<div class="position-image">
+										<img src="assets/images/user.png" alt="" class="img-circle">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-1 col-md-8 col-md-offset-2">
+										<p class="profile-desc text-green">
+											โปรดกรอกข้อมูลลงทะเบียนสมาชิก เพื่อการติดต่อกลับ<br>หากท่านโชคดีได้รางวัลจากเรา
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-8 col-md-offset-2">
+									<div class="row space-row">
+										<div class="col-md-6">
+											<div class="input-group">
+												<span class="input-group-addon addon-customize" id="basic-addon1">
+													<i class="fa fa-user-circle"></i> ชื่อ
+												</span>
+												<input type="text" class="form-control" placeholder="ชื่อ" aria-describedby="basic-addon1">
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="input-group">
+												<span class="input-group-addon addon-customize" id="basic-addon1">นามสกุล</span>
+												<input type="text" class="form-control" placeholder="นามสกุล" aria-describedby="basic-addon1">
+											</div>
+										</div>
+									</div>
+									
+									<div class="row space-row">
+										<div class="col-xs-12">
+											<div class="btn-group btn-group-justified" data-toggle="buttons">
+												<label class="btn btn-success btn-radio-green">
+													<input class="event-radio" type="radio" name="sex" id="men" autocomplete="off" checked="checked"> ชาย
+												</label>
+												<label class="btn btn-success btn-radio-green">
+													<input class="event-radio" type="radio" name="sex" id="women" autocomplete="off"> หญิง
+												</label>
+											</div>    
+										</div>
+									</div>
+
+									
+									<div class="row space-row">
+										<div class="col-xs-12">
+											<div class="input-group">
+												<span class="input-group-addon addon-customize" id="basic-addon1">
+													<i class="fa fa-gift"></i> ว/ด/ป เกิด
+												</span>
+												<input type="text" id="datepicker" class="form-control" placeholder="ปีเกิด" aria-describedby="basic-addon1">
+											</div>
+										</div>
+									</div>
+									<div class="row space-row">
+										<div class="col-xs-12">
+											<div class="input-group">
+												<span class="input-group-addon addon-customize" id="basic-addon1">
+													<i class="fa fa-thumb-tack" aria-hidden="true"></i> เลือกจังหวัด
+												</span>
+												<select class="form-control" aria-describedby="basic-addon1">
+													<option value="">เลือกจังหวัด</option>
+													<option value="0">กรุงเทพมหานคร</option>
+													<option value="1">นนทบุรี</option>
+													<option value="2">นครปฐม</option>
+													<option value="3">สมุทรปราการ</option>
+													<option value="4">สมุทสาคร</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="text-center">
+								
+								<div class="phone-number phone-number-contact">
+									<p class="title-label">
+										<i class="fa fa-mobile" aria-hidden="true"></i> เบอร์โทรศํพท์มือถือ
+									</p>
+
+									<input type="text" id="num-1" class="input-circle event-checked" value="" placeholder="0">
+									<input type="text" id="num-2" class="input-circle event-checked" value="" placeholder="0">
+									<input type="text" id="num-3" class="input-circle event-checked" value="" placeholder="0">
+									<div class="markline">-</div>
+									<input type="text" id="num-4" class="input-circle event-checked" value="" placeholder="0">
+									<input type="text" id="num-5"class="input-circle event-checked" value="" placeholder="0">
+									<input type="text" id="num-6" class="input-circle event-checked" value="" placeholder="0">
+									<div class="markline">-</div>
+									<input type="text" id="num-7" class="input-circle event-checked" value="" placeholder="0">
+									<input type="text" id="num-8" class="input-circle event-checked" value="" placeholder="0">
+									<input type="text" id="num-9" class="input-circle event-checked" value="" placeholder="0">
+									<input type="text" id="num-10" class="input-circle event-checked" value="" placeholder="0">
+								</div>
+							</div>
+							
+							<div class="row space-row">
+								<div class="col-md-10 col-md-offset-1 text-center">
+									<button class="btn btn-danger btn-red font-dbr">
+										กดเพื่อลงทะเบียน
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="numberMore" tabindex="-1" role="dialog" aria-labelledby="numberMoreLabel">
+			<div class="modal-dialog modal-dialog-center" role="document">
+				<div class="modal-content modal-bg">
+					<div class="modal-body text-center">
+						<h1>ขออภัยค่ะ</h1>
+						คุณกรอกเลขเกิน กรุณาใส่ตัวเลขใหม่อีกครั้งค่ะ
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="inputType" tabindex="-1" role="dialog" aria-labelledby="inputTypeLabel">
+			<div class="modal-dialog modal-dialog-center" role="document">
+				<div class="modal-content modal-bg">
+					<div class="modal-body text-center">
+						<h1>ขออภัยค่ะ</h1>
+						คุณไม่ได้กรอกตัวเลข
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+		<script src="assets/js/app.js"></script>
+		<script type="text/javascript">
+			$( document ).ready(function(jQuery) {
+				jQuery(".event-checked").on('keyup', function(e){
+					if(this.value.length > 1){
+						jQuery("#numberMore").modal('show');
+						jQuery(this).val("");
+						return false;
+					}
+
+					if(!jQuery.isNumeric(this.value)){
+						jQuery("#inputType").modal('show');
+						jQuery(this).val("");
+						return false;
+					}
+
+					var nextID = parseInt(this.id.replace('num-', ''))+1;
+					if(nextID < 11){
+						jQuery("#num-"+nextID).focus();
+					}
+				});
+
+				$('#datepicker').datetimepicker({
+					format: 'DD/MM/YYYY'
+				});	
+			});
+			
+		</script>
+	</body>
+</html>
