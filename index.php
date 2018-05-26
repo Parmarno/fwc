@@ -35,15 +35,15 @@
 									<li><a href="page1-2.html" target="_blank">Page 1 With Popup 2</a></li>
 								</ul>
 							</li>
-							<li><a href="#" target="_blank">Page 2</a></li>
+							<li><a href="page2.html" target="_blank">Page 2</a></li>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" 
 									aria-expanded="false">Page 3 <span class="caret"></span>
 								</a>
 								<ul class="dropdown-menu">
-									<li><a href="#" target="_blank">Page 3</a></li>
-									<li><a href="#" target="_blank">Page 3 With Popup 1</a></li>
-									<li><a href="#" target="_blank">Page 3 With Popup 2</a></li>
+									<li><a href="page3.html" target="_blank">Page 3</a></li>
+									<li><a href="page3-1.html" target="_blank">Page 3 With Popup 1</a></li>
+									<li><a href="page3-2.html" target="_blank">Page 3 With Popup 2</a></li>
 								</ul>
 							</li>
 						</ul>

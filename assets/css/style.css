@@ -9,7 +9,10 @@
 	font-style: normal;
 }
 
-.container-bg{ background: url(../../assets/images/bg.png) no-repeat top center;padding-top: 200px; background-size: 100%;}
+.container-bg{ background: url(../../assets/images/bg.png) no-repeat top center; padding-top: 200px; background-size: 100%;}
+.container-bg-success{ background: url(../../assets/images/bg-p2.png) no-repeat top center; min-height: 1024px; }
+
+.no-padding .container-bg{ padding-top: 340px; }
 @media (min-width : 768px) { 
 	.container-bg{ padding-top: 480px; }
 }
@@ -28,11 +31,15 @@
 
 .btn-green{ background-color: #008853; border-color: #008853; border-radius: 30px; padding: 10px 26px; }
 .btn-red{background-color: #FF0000; border-color: #FF0000; font-size: 3rem; margin: 2rem 0; }
+.btn-square{border-radius: 5px; }
+
 .line{ height: 5px; width: 90%; margin: 3rem auto; }
 .line.line-green{ background-color: #008853; }
 
 .text-main{ display: block; color: #008853; font-size: 5rem; font-family: DBRamintraX, 'sans-serif'; font-weight: bold;}
 .text-sub{ display: block; color: #111; font-size: 1.5rem; }
+
+.main-success-text{ color: #008853; font-size: 5rem; font-family: DBRamintraX, 'sans-serif'; font-weight: bold; }
 
 .phone-number .number-circle{ 
 	font-size: 7rem; font-family: DBRamintraX, 'sans-serif'; font-weight: bold; color: #008853; 
@@ -40,23 +47,14 @@
 	width: 60px; height: 60px;
 	margin: 0 .3rem;
 }
-.phone-number .markline{ 
-	display: inline-block; font-size: 7rem; font-family: DBRamintraX, 'sans-serif'; 
-	font-weight: bold; color: #008853;  
-}
+.phone-number .markline{  display: inline-block; font-size: 7rem; font-family: DBRamintraX, 'sans-serif';  font-weight: bold; color: #008853;   }
+.font-dbr{ font-family: DBRamintraX, 'sans-serif'; }
+.modal-bg{ background-color: #008853; font-size: 2rem; font-family: DBRamintraX, 'sans-serif'; font-weight: bold; color: #fff; padding: 5rem 0; text-shadow: 1px 1px #111;  }
+.modal-bg h1{ font-size: 3rem; font-weight: bold; }
 
-.font-dbr{
-	font-family: DBRamintraX, 'sans-serif';
-}
 
-.modal-bg{ 
-	background-color: #008853; font-size: 2rem; font-family: DBRamintraX, 'sans-serif'; font-weight: bold;
-	color: #fff; padding: 5rem 0; text-shadow: 1px 1px #111; 
-}
-
-.modal-bg h1{
-	font-size: 3rem; font-weight: bold;
-}
+.panel-modal{ padding: 2rem 0; }
+.text-green p{ font-size: 3rem; font-family: DBRamintraX, 'sans-serif'; color: #008853; font-weight: bold;  }
 
 @media (min-width : 768px) { 
 	.modal-dialog-center {
