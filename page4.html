@@ -16,7 +16,7 @@
 			<div class="col-md-8 col-md-offset-2">
 				<div id="main" class="panel-main">
 					<div class="panel-sub">
-						<form action="" method="POST">
+						<form action="" method="POST" id="validator" role="form">
 							<div class="profile">
 								<div class="circle-image text-center">
 									<div class="position-image">
@@ -35,17 +35,23 @@
 								<div class="col-md-8 col-md-offset-2">
 									<div class="row space-row">
 										<div class="col-md-6">
-											<div class="input-group">
-												<span class="input-group-addon addon-customize" id="basic-addon1">
-													<i class="fa fa-user-circle"></i> ชื่อ
-												</span>
-												<input type="text" class="form-control" placeholder="ชื่อ" aria-describedby="basic-addon1">
+											<div class="form-group">
+												<div class="input-group">
+													<span class="input-group-addon addon-customize" id="basic-addon1">
+														<i class="fa fa-user-circle"></i> ชื่อ
+													</span>
+													<input type="text" pattern="^[_A-z0-9๑-๙ก-เ]{1,}$" data-pattern-error="ต้องเป็นตัวหนังสือหรือตัวเลขเท่านั้น" class="form-control" data-error="กรุณาใส่ชื่อ" placeholder="ชื่อ" aria-describedby="basic-addon1" autocomplete="off" required>
+												</div>
+												<div class="help-block with-errors"></div>
 											</div>
 										</div>
 										<div class="col-md-6">
-											<div class="input-group">
-												<span class="input-group-addon addon-customize" id="basic-addon1">นามสกุล</span>
-												<input type="text" class="form-control" placeholder="นามสกุล" aria-describedby="basic-addon1">
+											<div class="form-group">
+												<div class="input-group">
+													<span class="input-group-addon addon-customize" id="basic-addon1">นามสกุล</span>
+													<input type="text" pattern="^[_A-z0-9๑-๙ก-เ]{1,}$" data-pattern-error="ต้องเป็นตัวหนังสือหรือตัวเลขเท่านั้น" class="form-control" data-error="กรุณาใส่นามสกุล" placeholder="นามสกุล" aria-describedby="basic-addon1" autocomplete="off" required>
+												</div>
+												<div class="help-block with-errors"></div>
 											</div>
 										</div>
 									</div>
@@ -66,28 +72,34 @@
 									
 									<div class="row space-row">
 										<div class="col-xs-12">
-											<div class="input-group">
-												<span class="input-group-addon addon-customize" id="basic-addon1">
-													<i class="fa fa-gift"></i> ว/ด/ป เกิด
-												</span>
-												<input type="text" id="datepicker" class="form-control" placeholder="ปีเกิด" aria-describedby="basic-addon1">
+											<div class="form-group">
+												<div class="input-group">
+													<span class="input-group-addon addon-customize" id="basic-addon1">
+														<i class="fa fa-gift"></i> ว/ด/ป เกิด
+													</span>
+													<input type="text" id="datepicker" data-error="กรุณาเลือกข้อมูล วัน เดือน ปี เกิด"  class="form-control" placeholder="ปีเกิด" aria-describedby="basic-addon1" required autocomplete="off">
+												</div>
+												<div class="help-block with-errors"></div>
 											</div>
 										</div>
 									</div>
 									<div class="row space-row">
 										<div class="col-xs-12">
-											<div class="input-group">
-												<span class="input-group-addon addon-customize" id="basic-addon1">
-													<i class="fa fa-thumb-tack" aria-hidden="true"></i> เลือกจังหวัด
-												</span>
-												<select class="form-control" aria-describedby="basic-addon1">
-													<option value="">เลือกจังหวัด</option>
-													<option value="0">กรุงเทพมหานคร</option>
-													<option value="1">นนทบุรี</option>
-													<option value="2">นครปฐม</option>
-													<option value="3">สมุทรปราการ</option>
-													<option value="4">สมุทสาคร</option>
-												</select>
+											<div class="form-group">
+												<div class="input-group">
+													<span class="input-group-addon addon-customize" id="basic-addon1">
+														<i class="fa fa-thumb-tack" aria-hidden="true"></i> เลือกจังหวัด
+													</span>
+													<select class="form-control" data-error="กรุณาเลือกจังหวัด"  aria-describedby="basic-addon1" required>
+														<option value="">เลือกจังหวัด</option>
+														<option value="0">กรุงเทพมหานคร</option>
+														<option value="1">นนทบุรี</option>
+														<option value="2">นครปฐม</option>
+														<option value="3">สมุทรปราการ</option>
+														<option value="4">สมุทสาคร</option>
+													</select>
+												</div>
+												<div class="help-block with-errors"></div>
 											</div>
 										</div>
 									</div>
@@ -101,24 +113,24 @@
 										<i class="fa fa-mobile" aria-hidden="true"></i> เบอร์โทรศํพท์มือถือ
 									</p>
 
-									<input type="text" id="num-1" class="input-circle event-checked" value="" placeholder="0">
-									<input type="text" id="num-2" class="input-circle event-checked" value="" placeholder="0">
-									<input type="text" id="num-3" class="input-circle event-checked" value="" placeholder="0">
+									<input type="tel" id="num-1" class="input-circle event-checked" value="" placeholder="0" autocomplete="off">
+									<input type="tel" id="num-2" class="input-circle event-checked" value="" placeholder="0" autocomplete="off">
+									<input type="tel" id="num-3" class="input-circle event-checked" value="" placeholder="0" autocomplete="off">
 									<div class="markline">-</div>
-									<input type="text" id="num-4" class="input-circle event-checked" value="" placeholder="0">
-									<input type="text" id="num-5"class="input-circle event-checked" value="" placeholder="0">
-									<input type="text" id="num-6" class="input-circle event-checked" value="" placeholder="0">
+									<input type="tel" id="num-4" class="input-circle event-checked" value="" placeholder="0" autocomplete="off">
+									<input type="tel" id="num-5"class="input-circle event-checked" value="" placeholder="0" autocomplete="off">
+									<input type="tel" id="num-6" class="input-circle event-checked" value="" placeholder="0" autocomplete="off">
 									<div class="markline">-</div>
-									<input type="text" id="num-7" class="input-circle event-checked" value="" placeholder="0">
-									<input type="text" id="num-8" class="input-circle event-checked" value="" placeholder="0">
-									<input type="text" id="num-9" class="input-circle event-checked" value="" placeholder="0">
-									<input type="text" id="num-10" class="input-circle event-checked" value="" placeholder="0">
+									<input type="tel" id="num-7" class="input-circle event-checked" value="" placeholder="0" autocomplete="off">
+									<input type="tel" id="num-8" class="input-circle event-checked" value="" placeholder="0" autocomplete="off">
+									<input type="tel" id="num-9" class="input-circle event-checked" value="" placeholder="0" autocomplete="off">
+									<input type="tel" id="num-10" class="input-circle event-checked" value="" placeholder="0" autocomplete="off">
 								</div>
 							</div>
 							
 							<div class="row space-row">
 								<div class="col-md-10 col-md-offset-1 text-center">
-									<button class="btn btn-danger btn-red font-dbr">
+									<button type="submit" class="btn btn-danger btn-red font-dbr">
 										กดเพื่อลงทะเบียน
 									</button>
 								</div>
@@ -151,11 +163,23 @@
 			</div>
 		</div>
 
+		<div class="modal fade" id="TelMiss" tabindex="-1" role="dialog" aria-labelledby="TelMissLabel">
+			<div class="modal-dialog modal-dialog-center" role="document">
+				<div class="modal-content modal-bg">
+					<div class="modal-body text-center">
+						<h1>ขออภัยค่ะ</h1>
+						คุณกรอกเบอร์โทรศัพท์ไม่ครบทุกหลัก
+					</div>
+				</div>
+			</div>
+		</div>
+
 
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
 		<script src="assets/js/app.js"></script>
 		<script type="text/javascript">
 			$( document ).ready(function(jQuery) {
@@ -178,9 +202,24 @@
 					}
 				});
 
-				$('#datepicker').datetimepicker({
+				jQuery('#datepicker').datetimepicker({
 					format: 'DD/MM/YYYY'
 				});	
+
+				jQuery('#validator').validator().on('submit', function(e){
+					var checked = false;
+					if (!e.isDefaultPrevented()) {
+						for( var init = 1; init <= 10 ; init++){
+							if(jQuery("#num-"+init).val() == ''){
+								jQuery("#TelMiss").modal('show');
+								return false;
+							} else {
+								checked = true;
+							}
+						}
+						return checked;
+					}
+				});
 			});
 			
 		</script>
