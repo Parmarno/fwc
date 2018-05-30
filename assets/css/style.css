@@ -256,7 +256,7 @@ input[type="checkbox"], input[type="radio"]{
 
 .toggle input[type="radio"]:disabled + .label-text:before{
 	content: "\f204";
-	color: #ccc;
+	color: #eee;
 }
 
 /*--- Effects--*/
@@ -328,6 +328,12 @@ input[type="radio"]:disabled + .label-text{
 
 input[type="radio"]:disabled + .label-text:before{
 	content: "\f111";
-	color: #008853;
+	color: #eee;
+}
+
+.disabled,
+.disabled label,
+.disabled input[type="radio"]{
+	color: #eee;
 }
 
