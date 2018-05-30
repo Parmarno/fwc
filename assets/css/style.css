@@ -37,7 +37,12 @@ body{
 .profile{ position: relative; }
 .profile .circle-image{ position: absolute; top: -80px; left: 50%; }
 .profile .circle-image .position-image{ position: relative; left: -50%;  }
-.profile .circle-image .position-image img{ max-width: 150px; border: 1px solid #444; }
+.profile .circle-image .position-image img{ max-width: 120px;  }
+@media only screen and (min-width : 992px) {
+	.profile .circle-image .position-image img{
+		border: 1px solid #444; 
+	}
+}
 .profile .profile-desc{ margin: 10rem 0 5rem; font-size: 1.5rem;line-height: 2; }
 
 .text-green{ color: #008853; text-align: center; }
@@ -88,6 +93,7 @@ body{
 	width: 24px; height: 24px;
 	margin: 0 .3rem; 
     text-align: center;
+    font-family: 'tahoma';
 }
 .phone-number .markline{  display: none; font-size: 7rem; font-family: DBRamintraX, 'sans-serif';  font-weight: bold; color: #008853; }
 
@@ -95,9 +101,10 @@ body{
 .phone-number-contact .input-circle{
 	font-size: 1.5rem; font-family: DBRamintraX, 'sans-serif'; font-weight: bold; color: #008853; 
 	line-height: 14px; display: inline-block; border: 1px solid #008853;  border-radius: 50%;
-	width: 14px; height: 14px;
-	margin: 0 .3rem; 
+	width: 18px; height: 18px;
+	margin: 0 .1rem; 
     text-align: center;
+    font-family: 'tahoma';
 }
 .phone-number-contact .markline{  display: none; font-size: 4rem; font-family: DBRamintraX, 'sans-serif';  font-weight: bold; color: #008853; }
 @media only screen and (min-width : 992px) {
@@ -119,7 +126,7 @@ body{
 
 
 .font-dbr{ font-family: DBRamintraX, 'sans-serif'; }
-.modal-bg{ background-color: #008853; font-size: 2rem; font-family: DBRamintraX, 'sans-serif'; font-weight: bold; color: #fff; padding: 5rem 0; text-shadow: 1px 1px #111;  }
+.modal-bg{ background-color: #008853; font-size: 2rem; font-family: 'tahoma'; font-weight: bold; color: #fff; padding: 5rem 0; text-shadow: 1px 1px #111;  }
 .modal-bg h1{ font-size: 3rem; font-weight: bold; }
 
 .font-btn{ font-size: 2rem; font-weight: bold; }
@@ -171,6 +178,7 @@ body{
 		font-size: 3rem;
 	}
 }
+
 
 .modal-choose{ border: 1px solid #008853; padding: 1rem 0 3rem;  }
 .modal-choose h1{ font-size: 3rem; font-family: DBRamintraX, 'sans-serif'; color: #008853; font-weight: bold; }
@@ -337,3 +345,7 @@ input[type="radio"]:disabled + .label-text:before{
 	color: #eee;
 }
 
+
+.display-none{
+	display: none;
+}

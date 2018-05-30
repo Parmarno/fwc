@@ -14,7 +14,7 @@
 			<div class="col-md-8 col-md-offset-2">
 				<div id="main" class="panel-main">
 					<div class="panel-sub">
-						<form action="" method="POST">
+						<form action="" method="POST" id="submit">
 							<div class="profile">
 								<div class="circle-image text-center">
 									<div class="position-image">
@@ -57,7 +57,7 @@
 							</div>
 							<div class="row">
 								<div class="col-md-10 col-md-offset-1">
-									<button class="btn btn-danger btn-block btn-red font-dbr">
+									<button id="submit-btn" class="btn btn-danger btn-block btn-red font-dbr">
 										ส่งรหัสเลือกทีมที่เชียร์
 									</button>
 								</div>
@@ -98,21 +98,43 @@
 			jQuery(".event-checked").on('keyup', function(e){
 			
 				if(this.value.length > 1){
-					jQuery("#numberMore").modal('show');
+					//jQuery("#numberMore").modal('show');
 					jQuery(this).val("");
 					return false;
 				}
-
+				/*
 				if(!jQuery.isNumeric(this.value)){
 					jQuery("#inputType").modal('show');
 					jQuery(this).val("");
 					return false;
 				}
+				*/
 
 				var nextID = parseInt(this.id.replace('num-', ''))+1;
 				if(nextID < 8){
 					jQuery("#num-"+nextID).focus();
 				}
+			});
+
+			jQuery("#submit").on('submit', function(e){
+				var checked = false;
+				if (!e.isDefaultPrevented()) {
+					for( var init = 1; init <= 7 ; init++){
+						if( jQuery("#num-"+init).val().length > 1){
+							jQuery("#numberMore").modal('show');
+							jQuery(".event-checked").val("");
+							return false;
+						} else if(!jQuery.isNumeric(jQuery("#num-"+init).val())){
+							jQuery("#inputType").modal('show');
+							jQuery(this).val("");
+							return false;
+						}else {
+							checked = true;
+						}
+					}
+				}
+				jQuery("#submit-btn").addClass('disabled');
+				return false;
 			});
 		</script>
 	</body>

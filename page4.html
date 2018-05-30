@@ -58,13 +58,16 @@
 									
 									<div class="row space-row">
 										<div class="col-xs-12">
-											<div class="btn-group btn-group-justified" data-toggle="buttons">
-												<label class="btn btn-success btn-radio-green">
-													<input class="event-radio" type="radio" name="sex" id="men" autocomplete="off" checked="checked"> ชาย
-												</label>
-												<label class="btn btn-success btn-radio-green">
-													<input class="event-radio" type="radio" name="sex" id="women" autocomplete="off"> หญิง
-												</label>
+											<div class="form-group">
+												<div class="btn-group btn-group-justified" data-toggle="buttons">
+													<label class="btn btn-success btn-radio-green active">
+														<input required class="event-radio" type="radio" name="sex" id="men" autocomplete="off" checked="checked"> ชาย
+													</label>
+													<label class="btn btn-success btn-radio-green">
+														<input required class="event-radio" type="radio" name="sex" id="women" autocomplete="off"> หญิง
+													</label>
+												</div>    
+												<div class="help-block with-errors"></div>
 											</div>    
 										</div>
 									</div>
@@ -126,11 +129,16 @@
 									<input type="tel" id="num-9" class="input-circle event-checked" value="" placeholder="0" autocomplete="off">
 									<input type="tel" id="num-10" class="input-circle event-checked" value="" placeholder="0" autocomplete="off">
 								</div>
+								<div id="error-telmiss" class="help-block with-errors display-none">
+									<ul class="list-unstyled">
+										<li><p class="text-danger">กรุณาใส่เบอร์โทรให้ครบ</p></li>
+									</ul>
+								</div>
 							</div>
 							
 							<div class="row space-row">
 								<div class="col-md-10 col-md-offset-1 text-center">
-									<button type="submit" class="btn btn-danger btn-red font-dbr">
+									<button id="submit-btn" type="submit" class="btn btn-danger btn-red font-dbr">
 										กดเพื่อลงทะเบียน
 									</button>
 								</div>
@@ -184,19 +192,21 @@
 		<script type="text/javascript">
 			$( document ).ready(function(jQuery) {
 				jQuery(".event-checked").on('keyup', function(e){
+					jQuery("#error-telmiss").addClass('display-none');
+					var nextID = parseInt(this.id.replace('num-', ''))+1;
 					if(this.value.length > 1){
-						jQuery("#numberMore").modal('show');
+						//jQuery("#numberMore").modal('show');
 						jQuery(this).val("");
 						return false;
 					}
-
+					/*
 					if(!jQuery.isNumeric(this.value)){
 						jQuery("#inputType").modal('show');
 						jQuery(this).val("");
 						return false;
 					}
-
-					var nextID = parseInt(this.id.replace('num-', ''))+1;
+					return checked;
+					*/
 					if(nextID < 11){
 						jQuery("#num-"+nextID).focus();
 					}
@@ -211,17 +221,24 @@
 					if (!e.isDefaultPrevented()) {
 						for( var init = 1; init <= 10 ; init++){
 							if(jQuery("#num-"+init).val() == ''){
-								jQuery("#TelMiss").modal('show');
+								//jQuery("#TelMiss").modal('show');
+								jQuery("#error-telmiss").removeClass('display-none');
 								return false;
-							} else {
+							} else if( jQuery("#num-"+init).val().length > 1){
+								jQuery("#numberMore").modal('show');
+								return false;
+							} else if(!jQuery.isNumeric(jQuery("#num-"+init).val())){
+								jQuery("#inputType").modal('show');
+								jQuery(this).val("");
+								return false;
+							}else {
+								jQuery("#submit-btn").addClass('disabled');
 								checked = true;
 							}
 						}
-						return checked;
 					}
 				});
-			});
-			
+			});	
 		</script>
 	</body>
 </html>
