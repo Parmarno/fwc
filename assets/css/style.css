@@ -13,7 +13,7 @@ body{
 	background-color: #667439;
 }
 
-.container-bg{ background: url(../../assets/images/bg.png) no-repeat top center; padding-top: 200px; background-size: 100%;}
+.container-bg{ background: url(../../assets/images/bg.png) no-repeat top center; padding-top: 250px; background-size: 100%;}
 .container-bg-success{ background: url(../../assets/images/bg-p2.png) no-repeat top center;  background-size: 100%; }
 
 .no-padding .container-bg{ padding-top: 340px; }
@@ -56,6 +56,10 @@ body{
 .btn-converse img{ max-height: 35px; padding-right: 2rem; }
 .btn-converse span{ display: block; text-align: left; }
 .btn-green-converse{ background-color: #fff; border-color: #008853; border-radius: 30px; padding: 10px 26px }
+.btn-converse:focus{
+	background-color: #fff !important;
+	color: #008853;
+}
 .btn-radio-green{ font-size: 1.5rem; color: #008853; border-radius: 35px !important; font-family: DBRamintraX, 'sans-serif'; font-weight: bold; background-color: #fff; border-color: #008853; }
 .btn-radio-green.active{ background-color: #008853; border-color: #008853; }
 
@@ -95,6 +99,10 @@ body{
     text-align: center;
     font-family: 'tahoma';
 }
+.phone-number .input-circle.input-small{
+	width: 30px; height: 30px;
+	margin: 0rem; 
+}
 .phone-number .markline{  display: none; font-size: 7rem; font-family: DBRamintraX, 'sans-serif';  font-weight: bold; color: #008853; }
 
 .phone-number-contact .number-circle,
@@ -121,6 +129,11 @@ body{
 	.phone-number-contact .input-circle{
 		width: 40px; height: 40px; line-height: 40px;
 		font-size: 4rem;
+	}
+
+	.phone-number .input-circle.input-small{
+		width: 60px; height: 60px;
+		margin: 0rem; 
 	}
 }
 
@@ -339,13 +352,54 @@ input[type="radio"]:disabled + .label-text:before{
 	color: #eee;
 }
 
-.disabled,
+.disabled input[type="radio"]:checked + .label-text:before{
+	content: "\f192";
+	color: #eee;
+}
+
+/* .disabled,
 .disabled label,
 .disabled input[type="radio"]{
 	color: #eee;
-}
+} */
 
 
 .display-none{
 	display: none;
 }
+
+
+.matches .disabled .form-check input[type='radio'],
+.matches .disabled label,
+.matches .disabled .label-font{
+	color: #eee;
+}
+
+.event-sex .icon-sex img{
+	height: 21px;
+	padding-right: 10px;
+}
+
+.event-sex .icon-sex{
+	display: inline-block;
+}
+.active .icon-sex{
+	display: none;
+}
+.event-sex .icon-sex.icon-white{
+	display: none;
+}
+
+.active .icon-sex.icon-white{
+	display: inline-block;
+}
+
+.event-sex:hover .icon-sex{
+	display: none;
+}
+
+.event-sex:hover .icon-sex.icon-white{
+	display: inline-block;
+}
+
+
