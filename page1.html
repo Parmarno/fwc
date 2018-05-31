@@ -111,8 +111,17 @@
 				*/
 
 				var nextID = parseInt(this.id.replace('num-', ''))+1;
-				if(nextID < 8){
-					jQuery("#num-"+nextID).focus();
+				var PrevID = parseInt(this.id.replace('num-', ''))-1;
+
+				if(e.keyCode == 46 || e.keyCode == 8){
+					if(PrevID > 0){
+						jQuery("#num-"+PrevID).val("");
+						jQuery("#num-"+PrevID).focus();
+					}
+				} else {
+					if(nextID < 8){
+						jQuery("#num-"+nextID).focus();
+					}
 				}
 			});
 
