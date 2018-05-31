@@ -208,6 +208,7 @@
 				jQuery(".event-checked").on('keyup', function(e){
 					jQuery("#error-telmiss").addClass('display-none');
 					var nextID = parseInt(this.id.replace('num-', ''))+1;
+					var PrevID = parseInt(this.id.replace('num-', ''))-1;
 					if(this.value.length > 1){
 						//jQuery("#numberMore").modal('show');
 						jQuery(this).val("");
@@ -221,9 +222,17 @@
 					}
 					return checked;
 					*/
-					if(nextID < 11){
-						jQuery("#num-"+nextID).focus();
+					if(e.keyCode == 46 || e.keyCode == 8){
+						if(PrevID > 0){
+							jQuery("#num-"+PrevID).val("");
+							jQuery("#num-"+PrevID).focus();
+						}
+					} else {
+						if(nextID < 11){
+							jQuery("#num-"+nextID).focus();
+						}
 					}
+					
 				});
 
 				jQuery('#datepicker').datetimepicker({
