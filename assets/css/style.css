@@ -32,7 +32,7 @@ body{
 	.container-bg{ padding-top: 560px; }
 }
 
-.panel-main{ position: relative; background-color: #E6E7E8; border-radius: 30px; padding: 5px; margin-bottom: 5rem;}
+.panel-main{ position: relative; background-color: #E6E7E8; border-radius: 30px; padding: 5px;}
 .panel-sub{ position: relative; background-color: #fff; border-radius: 30px; padding: 5px; }
 .profile{ position: relative; }
 .profile .circle-image{ position: absolute; top: -80px; left: 50%; }
@@ -100,10 +100,13 @@ body{
     font-family: 'tahoma';
 }
 .phone-number .input-circle.input-small{
-	width: 30px; height: 30px;
+	width: 27px; height: 27px;
 	margin: 0rem; 
 }
-.phone-number .markline{  display: none; font-size: 7rem; font-family: DBRamintraX, 'sans-serif';  font-weight: bold; color: #008853; }
+.phone-number .markline{ font-size: 2rem; font-family: DBRamintraX, 'sans-serif';  font-weight: bold; color: #008853; display: inline-block; }
+@media only screen and (min-width : 992px) {
+	.phone-number .markline{ font-size: 7rem; }
+}
 
 .phone-number-contact .number-circle,
 .phone-number-contact .input-circle{
@@ -401,5 +404,7 @@ input[type="radio"]:disabled + .label-text:before{
 .event-sex:hover .icon-sex.icon-white{
 	display: inline-block;
 }
+
+.images-bottom img{ width: 100%; }
 
 
