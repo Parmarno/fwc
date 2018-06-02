@@ -130,18 +130,18 @@
 										<i class="fa fa-mobile" aria-hidden="true"></i> เบอร์โทรศํพท์มือถือ
 									</p>
 
-									<input type="tel" id="num-1" class="input-circle event-checked" value="" placeholder="0" autocomplete="off">
-									<input type="tel" id="num-2" class="input-circle event-checked" value="" placeholder="0" autocomplete="off">
-									<input type="tel" id="num-3" class="input-circle event-checked" value="" placeholder="0" autocomplete="off">
+									<input type="tel" pattern="^[0-9]{1,}$" id="num-1" class="input-circle event-checked" value="" placeholder="0" autocomplete="off">
+									<input type="tel" pattern="^[0-9]{1,}$" id="num-2" class="input-circle event-checked" value="" placeholder="0" autocomplete="off">
+									<input type="tel" pattern="^[0-9]{1,}$" id="num-3" class="input-circle event-checked" value="" placeholder="0" autocomplete="off">
 									<div class="markline">-</div>
-									<input type="tel" id="num-4" class="input-circle event-checked" value="" placeholder="0" autocomplete="off">
-									<input type="tel" id="num-5"class="input-circle event-checked" value="" placeholder="0" autocomplete="off">
-									<input type="tel" id="num-6" class="input-circle event-checked" value="" placeholder="0" autocomplete="off">
+									<input type="tel" pattern="^[0-9]{1,}$" id="num-4" class="input-circle event-checked" value="" placeholder="0" autocomplete="off">
+									<input type="tel" pattern="^[0-9]{1,}$" id="num-5"class="input-circle event-checked" value="" placeholder="0" autocomplete="off">
+									<input type="tel" pattern="^[0-9]{1,}$" id="num-6" class="input-circle event-checked" value="" placeholder="0" autocomplete="off">
 									<div class="markline">-</div>
-									<input type="tel" id="num-7" class="input-circle event-checked" value="" placeholder="0" autocomplete="off">
-									<input type="tel" id="num-8" class="input-circle event-checked" value="" placeholder="0" autocomplete="off">
-									<input type="tel" id="num-9" class="input-circle event-checked" value="" placeholder="0" autocomplete="off">
-									<input type="tel" id="num-10" class="input-circle event-checked" value="" placeholder="0" autocomplete="off">
+									<input type="tel" pattern="^[0-9]{1,}$" id="num-7" class="input-circle event-checked" value="" placeholder="0" autocomplete="off">
+									<input type="tel" pattern="^[0-9]{1,}$" id="num-8" class="input-circle event-checked" value="" placeholder="0" autocomplete="off">
+									<input type="tel" pattern="^[0-9]{1,}$" id="num-9" class="input-circle event-checked" value="" placeholder="0" autocomplete="off">
+									<input type="tel" pattern="^[0-9]{1,}$" id="num-10" class="input-circle event-checked" value="" placeholder="0" autocomplete="off">
 								</div>
 								<div id="error-telmiss" class="help-block with-errors display-none">
 									<ul class="list-unstyled">
@@ -211,6 +211,11 @@
 					var PrevID = parseInt(this.id.replace('num-', ''))-1;
 					if(this.value.length > 1){
 						//jQuery("#numberMore").modal('show');
+						jQuery(this).val("");
+						return false;
+					}
+
+					if(!(/^\d+$/.test(this.value))){
 						jQuery(this).val("");
 						return false;
 					}

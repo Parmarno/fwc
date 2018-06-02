@@ -117,7 +117,22 @@ body{
     text-align: center;
     font-family: 'tahoma';
 }
+
+@media (min-width : 375px) { 
+	.phone-number-contact .number-circle,
+	.phone-number-contact .input-circle{ 
+		width: 22px; height: 22px; 
+	}
+}
 .phone-number-contact .markline{ font-size: 1rem; font-family: DBRamintraX, 'sans-serif';  font-weight: bold; color: #008853; }
+
+@media only screen and (min-width : 375px) {
+	.phone-number .input-circle.input-small{
+		width: 35px; height: 35px;
+		margin: 0rem;  font-size: 2rem;
+	}
+}
+
 @media only screen and (min-width : 992px) {
 	.phone-number .markline{
 		display: inline-block;
@@ -137,7 +152,7 @@ body{
 
 	.phone-number .input-circle.input-small{
 		width: 60px; height: 60px;
-		margin: 0rem; 
+		margin: 0rem; font-size: 4rem;
 	}
 }
 
@@ -422,6 +437,11 @@ html{ background-color: #667439; }
 
 @media (min-width : 375px) { 
 	.page-2{ height: 667px; }
+}
+
+@media (min-width : 414px) { 
+	.page-2{ height: 736px; }
+	.page-2 .container-bg-page-2{ padding-top: 250px; }
 }
 
 @media (min-width : 768px) { 

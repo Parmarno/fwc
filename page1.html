@@ -110,6 +110,11 @@
 				}
 				*/
 
+				if(!(/^\d+$/.test(this.value))){
+					jQuery(this).val("");
+					return false;
+				}
+
 				var nextID = parseInt(this.id.replace('num-', ''))+1;
 				var PrevID = parseInt(this.id.replace('num-', ''))-1;
 
