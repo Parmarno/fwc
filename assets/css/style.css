@@ -436,6 +436,10 @@ html{ background-color: #667439; }
 }
 
 @media (min-width : 375px) { 
+	.page-2{ height: 812px; }
+}
+
+@media (min-width : 380px) { 
 	.page-2{ height: 667px; }
 }
 
