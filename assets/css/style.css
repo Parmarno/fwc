@@ -92,7 +92,7 @@ body{
 .phone-number{ margin-top: 3rem; }
 .phone-number .number-circle,
 .phone-number .input-circle{ 
-	font-size: 2rem; font-family: DBRamintraX, 'sans-serif'; font-weight: bold; color: #008853; 
+	font-size: 1.5rem; font-family: DBRamintraX, 'sans-serif'; font-weight: bold; color: #008853; 
 	line-height: 24px; display: inline-block; border: 1px solid #008853;  border-radius: 50%;
 	width: 24px; height: 24px;
 	margin: 0 .3rem; 
@@ -110,28 +110,29 @@ body{
 
 .phone-number-contact .number-circle,
 .phone-number-contact .input-circle{
-	font-size: 1.5rem; font-family: DBRamintraX, 'sans-serif'; font-weight: bold; color: #008853; 
+	font-size: 1rem; font-family: DBRamintraX, 'sans-serif'; font-weight: bold; color: #008853; 
 	line-height: 14px; display: inline-block; border: 1px solid #008853;  border-radius: 50%;
-	width: 18px; height: 18px;
+	width: 16px; height: 16px;
 	margin: 0 .1rem; 
     text-align: center;
     font-family: 'tahoma';
 }
-.phone-number-contact .markline{  display: none; font-size: 4rem; font-family: DBRamintraX, 'sans-serif';  font-weight: bold; color: #008853; }
+.phone-number-contact .markline{ font-size: 1rem; font-family: DBRamintraX, 'sans-serif';  font-weight: bold; color: #008853; }
 @media only screen and (min-width : 992px) {
 	.phone-number .markline{
 		display: inline-block;
+		font-size: 4rem;
 	}
 	.phone-number .number-circle,
 	.phone-number .input-circle{
 		width: 60px; height: 60px; line-height: 60px;
-		font-size: 7rem;
+		font-size: 4rem; 
 	}
 	
 	.phone-number-contact .number-circle,
 	.phone-number-contact .input-circle{
 		width: 40px; height: 40px; line-height: 40px;
-		font-size: 4rem;
+		font-size: 3rem;
 	}
 
 	.phone-number .input-circle.input-small{
@@ -407,6 +408,7 @@ input[type="radio"]:disabled + .label-text:before{
 
 .images-bottom img{ width: 100%; }
 
+html{ background-color: #667439; }
 .page-2{ background: url(../../assets/images/bg-p2.png) no-repeat top center; background-size: 100% 100%; height: 570px; }
 .page-2 .main-success-text{ margin: 0; }
 .page-2 .line{ margin: 1rem; }
@@ -428,7 +430,7 @@ input[type="radio"]:disabled + .label-text:before{
 }
 
 @media (min-width : 992px) { 
-	.page-2{ background: url(../../assets/images/bg-p2.png) no-repeat top center; height: auto; }
+	.page-2{ background: url(../../assets/images/bg-p2.png) no-repeat top center; }
 }
 
 
