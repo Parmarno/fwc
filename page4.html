@@ -215,10 +215,6 @@
 						return false;
 					}
 
-					if(!(/^\d+$/.test(this.value))){
-						jQuery(this).val("");
-						return false;
-					}
 					/*
 					if(!jQuery.isNumeric(this.value)){
 						jQuery("#inputType").modal('show');
@@ -236,6 +232,11 @@
 						if(nextID < 11){
 							jQuery("#num-"+nextID).focus();
 						}
+					}
+
+					if(!(/^\d+$/.test(this.value))){
+						jQuery(this).val("");
+						return false;
 					}
 					
 				});
